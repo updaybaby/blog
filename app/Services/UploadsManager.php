@@ -2,10 +2,7 @@
 
 namespace App\Services;
 
-<<<<<<< HEAD
-=======
 use Carbon\Carbon;
->>>>>>> local to hs test
 use Illuminate\Support\Facades\Storage;
 use Dflydev\ApacheMimeTypes\PhpRepository;
 
@@ -16,9 +13,6 @@ class UploadsManager
 
     public function __construct(PhpRepository $mimeDetect)
     {
-<<<<<<< HEAD
-        Storage::disk(config('blog.uploads.storage'));
-=======
         $this->disk = Storage::disk(config('blog.uploads.storage'));
         $this->mimeDetect = $mimeDetect;
     }
@@ -145,6 +139,5 @@ class UploadsManager
         return Carbon::createFromTimestamp(
             $this->disk->lastModified($path)
         );
->>>>>>> local to hs test
     }
 }
